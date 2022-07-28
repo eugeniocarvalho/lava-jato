@@ -1,6 +1,8 @@
 .image-logo {
   width: 22px;
   height: 22px;
+  filter: invert(100%);
+  margin-right: .5rem;
 }
 
 .brand-register {
