@@ -5,14 +5,15 @@
   margin-right: .5rem;
 }
 
-.brand-register {
+.brand-register{
   padding: 7% 14%;
   height: calc(100vh - 152px);
 }
 
-.data-form {
-  max-width: 250px;
+.client-register {
+  padding: 3% 6%;
 }
+
 
 .button {
   margin: 1.5rem 0;
