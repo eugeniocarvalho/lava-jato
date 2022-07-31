@@ -17,3 +17,27 @@
 .button {
   margin: 1.5rem 0;
 }
+
+.graphic-pie {
+  max-width: 500px;
+}
+
+.dashboard {
+  font-size: 4rem;
+}
+
+.update-button {
+  margin-left: 1rem;
+}
+
+.dashboard-info {
+  margin-top: 4rem;
+}
+
+.dashboard-info__title {
+  font-size: 2rem;
+}
+
+.dashboard-info__time {
+  font-size: 6rem;
+}

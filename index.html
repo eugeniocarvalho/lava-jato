@@ -50,9 +50,38 @@
   </header>
 
   <main class="container-fluid">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, aut dolorum vero fugiat perspiciatis eos
-      mollitia? Laborum eaque quod, autem fuga porro impedit omnis vitae quidem, sit totam ab, odit dolorem nisi eveniet
-      aspernatur? Numquam sequi beatae repellat eaque quidem!</p>
+    <div class="row p-5">
+      <div class="col">
+        <h2 class="dashboard">Dashboard</h2>
+
+        <form action="" class="data-form d-flex align-items-end">
+          <div class="m-2 d-flex flex-column">
+            <label for="data-inicio">Data incial</label>
+            <input class="input-group date" type="date" name="data-inicio" id="data-inicio">
+          </div>
+          <div class="m-2 d-flex flex-column">
+            <label for="data-inicio">Data final</label>
+            <input class="input-group date" type="date" name="data-final" id="data-final">
+          </div>
+          <button class="btn btn-primary update-button">Atualizar</button>
+        </form>
+        <div class="dashboard-info row">
+          <div class="ms-auto">
+            <h3 class="dashboard-info__title">Média de atendimento para o periodo:</h3>
+            <p class="ms-5 dashboard-info__time">35 minutos</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col ms-auto">
+        <div class="text-center">
+          <h2 class="mb-4">Serviços mais solicitados</h2>
+          <div class="graphic-pie m-auto">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="bg-light text-center text-lg-start py-2 mt-auto">
@@ -65,6 +94,8 @@
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/77c7be6730.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.min.js"></script>
+  <script src="assets/js/chart.js"></script>
 </body>
 
 </html>
