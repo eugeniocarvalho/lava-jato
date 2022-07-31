@@ -41,3 +41,17 @@
 .dashboard-info__time {
   font-size: 6rem;
 }
+
+@media screen and (max-width: 502px) {
+  .dashboard, .dashboard-info__time {
+    font-size: 2rem;
+  }
+
+  .dashboard-info__title {
+    font-size: 1.5rem;
+  }
+
+  .update-button {
+    margin-top: 1rem;
+  }
+}
