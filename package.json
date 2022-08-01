@@ -1,0 +1,22 @@
+{
+  "name": "lava-jato",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugeniocarvalho/lava-jato.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eugeniocarvalho/lava-jato/issues"
+  },
+  "homepage": "https://github.com/eugeniocarvalho/lava-jato#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
