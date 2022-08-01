@@ -16,5 +16,17 @@
       "id": 3,
       "name": "Ferrari"
     }
+  ],
+  "model": [
+    {
+      "id": 1,
+      "name": "Supra",
+      "idBrand": 3
+    },
+    {
+      "name": "Civic",
+      "idBrand": "1",
+      "id": 2
+    }
   ]
 }
