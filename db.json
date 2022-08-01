@@ -28,5 +28,17 @@
       "idBrand": "1",
       "id": 2
     }
+  ],
+  "service": [
+    {
+      "id": 1,
+      "name": "Lavagem simples",
+      "value": 50
+    },
+    {
+      "name": "Lavagem rápida",
+      "value": 100,
+      "id": 2
+    }
   ]
 }
