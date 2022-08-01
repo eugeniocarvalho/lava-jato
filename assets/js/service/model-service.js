@@ -1,5 +1,5 @@
 const createModel = (name, idBrand) => {
-  return fetch(`http://localhost:3000/model`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/model`, {
     method: "POST",
     headers: {
       "Content-type": "application/json"
