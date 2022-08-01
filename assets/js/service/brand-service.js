@@ -5,6 +5,21 @@ const listBrands = () => {
   });
 }
 
+const registerBrand = (name) => {
+  return fetch(`http://localhost:3000/brand`, {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json"
+    },
+    body: JSON.stringify({
+      name: name
+    })
+  }).then(response => {
+    response.body;
+  });
+}
+
 export const brandService = {
-  listBrands
+  listBrands,
+  registerBrand
 }
