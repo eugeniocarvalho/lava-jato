@@ -50,14 +50,36 @@
   </header>
 
   <main class="container-fluid">
-    <section class="brand-register">
-      <h1>Cadastro de marca</h1>
-      <form class="data-form" data-form>
-        <label class="form-label" for="name">Nome</label>
-        <input class="form-control input-width" type="text" placeholder="Ex: Honda" aria-label="Ex:Honda" required>
-        <a class="btn btn-danger button me-4" href="index.html">Cancelar</a>
-        <button type="submit" class="btn btn-success button">Salvar</button>
-      </form>
+    <section class="p-5 d-flex justify-content-between align-items-center flex-wrap">
+      <h1>Marcas</h1>
+      <a class="btn btn-primary button" href="cadastra_marca.html">Cadastrar marca</a>
+    </section>
+    <section class="brand-table">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th colspan="2" class=" ">Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mark</td>
+            <td class="icone-editar"><i class="fa-solid fa-pencil"></i></td>
+            <td class="icone-deletar"><i class="fa-regular fa-trash-can"></i></td>
+          </tr>
+          <tr>
+            <td>Jacob</td>
+            <td class="icone-editar"><i class="fa-solid fa-pencil"></i></td>
+            <td class="icone-deletar"><i class="fa-regular fa-trash-can"></i></td>
+          </tr>
+          <tr>
+            <td>Larry the Bird</td>
+            <td class="icone-editar"><i class="fa-solid fa-pencil"></i></td>
+            <td class="icone-deletar"><i class="fa-regular fa-trash-can"></i></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </main>
 

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro cliente | Lava Jato</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="shortcut icon" href="assets/icons/car-wash-favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <img src="assets/icons/car-wash-logo.png" alt="Logo lava jato" class="image-logo">
+          <a class="navbar-brand" href="/index.html">Lava Jato</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ms-auto" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/marcas.html">Marcas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/modelos.html">Modelos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/servicos.html">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/clientes.html">Clientes</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-fluid">
+    <section class="client-register">
+      <h1>Cadastro de cliente</h1>
+      <form class="data-form" data-form>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mt-3">
+              <label class="form-label" for="name">Nome*</label>
+              <input class="form-control" type="text" placeholder="Ex: João Santos" aria-label="Ex: João Santos" name="name" required>
+            </div>
+
+            <div class="col-md-4 mt-3">
+              <label class="form-label" for="telefone">Telefone*</label>
+              <input class="form-control" type="tel" placeholder="Ex: 99 98765432" aria-label="Ex: 99 98765432" name="phone" required>
+            </div>
+
+            <div class="col-md-4 mt-3">
+              <label class="form-label" for="telefone">CPF/CPNJ*</label>
+              <input class="form-control" type="text" placeholder="Ex: 111.222.333-44" aria-label="Ex: 111.222.333-44" name="document" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2 mt-3">
+              <label class="form-label" for="name">CEP*</label>
+              <input class="form-control" type="text" placeholder="Ex: 62360000" aria-label="Ex: 62360000" name="zipCode" required pattern="[\d]{5}-?[\d]{3}">
+            </div>
+
+            <div class="col-md-4 mt-3">
+              <label class="form-label" for="telefone">Logradouro*</label>
+              <input class="form-control" type="text" placeholder="Ex: Rua 7 de Setembro" aria-label="Ex: Rua 7 de Setembro" name="street" required>
+            </div>
+
+            <div class="col-md-2 mt-3">
+              <label class="form-label" for="telefone">Número*</label>
+              <input class="form-control" type="text" placeholder="Ex: 123" aria-label="Ex: 123" name="number" required>
+            </div>
+            
+            <div class="col mt-3">
+              <label class="form-label" for="telefone">Complemento</label>
+              <input class="form-control" type="text" placeholder="Ex: Próx a praça" aria-label="Ex: Próx a praça" name="complement">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 3 mt-3">
+              <label class="form-label" for="name">Bairro*</label>
+              <input class="form-control" type="text" placeholder="Ex: Centro" aria-label="Ex: Centro" name="district" required>
+            </div>
+
+            <div class="col-md-4 mt-3">
+              <label class="form-label" for="telefone">Cidade*</label>
+              <input class="form-control" type="text" placeholder="Ex: Ibiapina" aria-label="Ex: Ibiapina" name="city" required>
+            </div>
+
+            <div class="col-md-4 mt-3">
+              <label class="form-label" for="telefone">Estado*</label>
+              <input class="form-control" type="text" placeholder="Ex: Ceará" aria-label="Ex: Ceará" name="state" required>
+            </div>
+          </div>
+          <div class="col-sm-12 text-center">
+            <a class="btn btn-danger button me-4 col" href="index.html">Cancelar</a>
+            <button type="submit" class="btn btn-success button col">Salvar</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-light text-center text-lg-start py-2 mt-auto">
+    <p class="text-center text-muted">© 2022 Company, Inc</p>
+    <p class="text-center">Developed by <a href="https://github.com/eugeniocarvalho">Eugênio Carvalho</a></p>
+  </footer>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/77c7be6730.js" crossorigin="anonymous"></script>
+  <script type="module" src="assets/js/controller/clientService-controller.js"></script>
+</body>
+
+</html>

@@ -9,6 +9,19 @@
   padding: 7% 14%;
 }
 
+.brand-table {
+  padding: 0 14% 2% 14%;
+}
+
+.opcoes, .icone-editar, .icone-deletar {
+	width: 20px;
+}
+
+.fa-pencil, .fa-trash-can {
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+
 .client-register {
   padding: 3% 6%;
 }
@@ -48,6 +61,10 @@
 @media screen and (max-width: 502px) {
   .input-width {
     width: 80%;
+  }
+
+  .brand-table {
+    padding: 0;
   }
   .dashboard, .dashboard-info__time {
     font-size: 2rem;
