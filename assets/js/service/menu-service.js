@@ -1,5 +1,5 @@
 const registerService = (name, value) => {
-  return fetch(`https://box3-lava-jato.herokuapp.com/service`, {
+  return fetch(`http://localhost:3000/service`, {
     method: "POST",
     headers: {
       "Content-type": "application/json"

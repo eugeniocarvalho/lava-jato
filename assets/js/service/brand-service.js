@@ -1,12 +1,12 @@
 const listBrands = () => {
-  return fetch(`https://box3-lava-jato.herokuapp.com/brand`)
+  return fetch(`http://localhost:3000/brand`)
   .then( response => {
     return response.json();
   });
 }
 
 const registerBrand = (name) => {
-  return fetch(`https://box3-lava-jato.herokuapp.com/brand`, {
+  return fetch(`http://localhost:3000/brand`, {
     method: "POST",
     headers: {
       "Content-type": "application/json"
