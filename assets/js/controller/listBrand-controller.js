@@ -13,7 +13,7 @@ const addnewBrandToTable = (name, id) => {
   const newTr = document.createElement("tr");
   const content = `
             <td>${name}</td>
-            <td class="icone-editar"><i class="fa-solid fa-pencil"></i></td>
+            <td class="icone-editar"><a href="edit_brand.html?id=${id}"><i class="fa-solid fa-pencil"></i></a></td>
             <td class="icone-deletar"><i class="fa-regular fa-trash-can"></i></td>
           `;
 

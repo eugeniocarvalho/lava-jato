@@ -25,8 +25,32 @@ const deleteBrand = (id) => {
   });
 }
 
+const updateBrand = (id, name) => {
+  return fetch(`http://localhost:3000/brand/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({
+      name: name,
+    })
+  })
+  .then(resposta => {
+    return resposta.json();
+  });
+}
+
+const detailsBrand = (id) => {
+  return fetch(`http://localhost:3000/brand/${id}`)
+  .then( response => {
+    return response.json();
+  })
+}
+
 export const brandService = {
   listBrands,
   registerBrand,
-  deleteBrand
+  deleteBrand,
+  updateBrand,
+  detailsBrand
 }
