@@ -9,7 +9,7 @@ const createOption = (name, id) => {
   return option;
 }
 
-const addnewBrandToTable = (name) => {
+const addnewBrandToTable = (name, id) => {
   const newTr = document.createElement("tr");
   const content = `
             <td>${name}</td>
@@ -18,7 +18,7 @@ const addnewBrandToTable = (name) => {
           `;
 
   newTr.innerHTML = content;
-
+  newTr.dataset.id = id
   return newTr;
 }
 
@@ -33,7 +33,17 @@ brandService.listBrands()
       }
 
       if (brandTable != null)
-        brandTable.appendChild(addnewBrandToTable(brand.name));
-
+        brandTable.appendChild(addnewBrandToTable(brand.name, brand.id));
     });
   });
+
+brandTable.addEventListener("click", event => {
+  const deleteButton = event.target.className == "fa-regular fa-trash-can";
+  
+  if (deleteButton) {
+    const brand = event.target.closest("[data-id]");
+    const id = brand.dataset.id;
+
+    brandService.deleteBrand(id);
+  }
+});

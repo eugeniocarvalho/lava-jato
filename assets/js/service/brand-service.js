@@ -19,7 +19,14 @@ const registerBrand = (name) => {
   });
 }
 
+const deleteBrand = (id) => {
+  return fetch(`http://localhost:3000/brand/${id}`, {
+    method: "DELETE"
+  });
+}
+
 export const brandService = {
   listBrands,
-  registerBrand
+  registerBrand,
+  deleteBrand
 }
