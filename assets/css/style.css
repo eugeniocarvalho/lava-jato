@@ -9,7 +9,7 @@
   padding: 7% 14%;
 }
 
-.brand-table {
+.container-table {
   padding: 0 14% 2% 14%;
 }
 
@@ -63,7 +63,7 @@
     width: 80%;
   }
 
-  .brand-table {
+  .container-table {
     padding: 0;
   }
   .dashboard, .dashboard-info__time {
