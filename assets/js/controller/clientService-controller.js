@@ -15,11 +15,25 @@ const state = form.state.value;
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  const client = {
+    "name": form.name.value,
+    "phone": form.phone.value,
+    "document": form.document.value,
+    "street": form.street.value,
+    "number": form.number.value,
+    "complement": form.complement.value,
+    "district": form.district.value,
+    "city": form.city.value,
+    "state": form.state.value
+   }
+
+   clientService.createClient(client);
 });
 
 zipCode.addEventListener("input", event => {
-  if (!event.target.validity.patternMismatch)
+  if (!event.target.validity.patternMismatch) {
     clientService.fillZipCode(zipCode.value);
+  }
   else {
     form.street.value = "";
     form.complement.value = "";

@@ -40,5 +40,31 @@
       "value": 100,
       "id": 2
     }
+  ],
+  "client": [
+    {
+      "id": 1,
+      "name": "joão",
+      "phone": "12 34567890",
+      "document": "12345678900",
+      "street": "Rua",
+      "number": "123",
+      "complement": "Próx a praça",
+      "district": "Centro",
+      "city": "Ibiapina",
+      "state": "Ce",
+      "cep": "6236000"
+    },
+    {
+      "name": "Eugênio",
+      "phone": "8371283783",
+      "street": "Rua 7 de setembro",
+      "number": "1",
+      "complement": "Próx deposito bebida",
+      "district": "Centro",
+      "city": "Ibiapina",
+      "state": "CE",
+      "id": 4
+    }
   ]
 }

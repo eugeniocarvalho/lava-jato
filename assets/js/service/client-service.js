@@ -1,3 +1,25 @@
+const createClient = (client) => {
+  return fetch(`http://localhost:3000/client`, {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json"
+    },
+    body: JSON.stringify({
+      "name": client.name,
+      "phone": client.phone,
+      "document": client.clientDocument,
+      "cep": client.zipCode,
+      "street": client.street,
+      "number": client.number,
+      "complement": client.complement,
+      "district": client.district,
+      "city": client.city,
+      "state": client.state
+    })
+  }).then(response => {
+    return response.body;
+  })
+}
 const fillZipCode = (zipCodeValue) => {
   const zipCode = zipCodeValue.replace(/\D/g, "");
 
@@ -15,7 +37,6 @@ const fillZipCode = (zipCodeValue) => {
       .then(response => response.json())
       .then(data => {
         if (data.erro) {
-          console.log('Não foi possivel buscar o cep');
           return;
         }
 
@@ -36,5 +57,6 @@ function fillAddressFields(data) {
 }
 
 export const clientService = {
+  createClient,
   fillZipCode,
 }
