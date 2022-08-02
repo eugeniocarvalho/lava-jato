@@ -52,67 +52,66 @@
   <main class="container-fluid">
     <section class="client-register">
       <h1>Cadastro de cliente</h1>
-      <form action="" class="data-form">
+      <form class="data-form" data-form>
         <div class="container">
           <div class="row">
             <div class="col-md-4 mt-3">
-              <label class="form-label" for="name">Nome</label>
-              <input class="form-control" type="text" placeholder="Ex: João Santos" aria-label="Ex: João Santos">
+              <label class="form-label" for="name">Nome*</label>
+              <input class="form-control" type="text" placeholder="Ex: João Santos" aria-label="Ex: João Santos" name="name" required>
             </div>
 
             <div class="col-md-4 mt-3">
-              <label class="form-label" for="telefone">Telefone</label>
-              <input class="form-control" type="text" placeholder="Ex: 99 98765432" aria-label="Ex: 99 98765432">
+              <label class="form-label" for="telefone">Telefone*</label>
+              <input class="form-control" type="tel" placeholder="Ex: 99 98765432" aria-label="Ex: 99 98765432" name="phone" required>
             </div>
 
             <div class="col-md-4 mt-3">
-              <label class="form-label" for="telefone">CPF/CPNJ</label>
-              <input class="form-control" type="text" placeholder="Ex: 111.222.333-44" aria-label="Ex: 111.222.333-44">
+              <label class="form-label" for="telefone">CPF/CPNJ*</label>
+              <input class="form-control" type="text" placeholder="Ex: 111.222.333-44" aria-label="Ex: 111.222.333-44" name="document" required>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-2 mt-3">
-              <label class="form-label" for="name">CEP</label>
-              <input class="form-control" type="text" placeholder="Ex: 62360000" aria-label="Ex: 62360000">
+              <label class="form-label" for="name">CEP*</label>
+              <input class="form-control" type="text" placeholder="Ex: 62360000" aria-label="Ex: 62360000" name="zipCode" required pattern="[\d]{5}-?[\d]{3}">
             </div>
 
             <div class="col-md-4 mt-3">
-              <label class="form-label" for="telefone">Logradouro</label>
-              <input class="form-control" type="text" placeholder="Ex: Rua 7 de Setembro" aria-label="Ex: Rua 7 de Setembro">
+              <label class="form-label" for="telefone">Logradouro*</label>
+              <input class="form-control" type="text" placeholder="Ex: Rua 7 de Setembro" aria-label="Ex: Rua 7 de Setembro" name="street" required>
             </div>
 
             <div class="col-md-2 mt-3">
-              <label class="form-label" for="telefone">Número</label>
-              <input class="form-control" type="text" placeholder="Ex: 123" aria-label="Ex: 123">
+              <label class="form-label" for="telefone">Número*</label>
+              <input class="form-control" type="text" placeholder="Ex: 123" aria-label="Ex: 123" name="number" required>
             </div>
-
             
             <div class="col mt-3">
               <label class="form-label" for="telefone">Complemento</label>
-              <input class="form-control" type="text" placeholder="Ex: Próx a praça" aria-label="Ex: Próx a praça">
+              <input class="form-control" type="text" placeholder="Ex: Próx a praça" aria-label="Ex: Próx a praça" name="complement">
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-4 3 mt-3">
-              <label class="form-label" for="name">Bairro</label>
-              <input class="form-control" type="text" placeholder="Ex: Centro" aria-label="Ex: Centro">
+              <label class="form-label" for="name">Bairro*</label>
+              <input class="form-control" type="text" placeholder="Ex: Centro" aria-label="Ex: Centro" name="district" required>
             </div>
 
             <div class="col-md-4 mt-3">
-              <label class="form-label" for="telefone">Cidade</label>
-              <input class="form-control" type="text" placeholder="Ex: Ibiapina" aria-label="Ex: Ibiapina">
+              <label class="form-label" for="telefone">Cidade*</label>
+              <input class="form-control" type="text" placeholder="Ex: Ibiapina" aria-label="Ex: Ibiapina" name="city" required>
             </div>
 
             <div class="col-md-4 mt-3">
-              <label class="form-label" for="telefone">Estado</label>
-              <input class="form-control" type="text" placeholder="Ex: Ceará" aria-label="Ex: Ceará">
+              <label class="form-label" for="telefone">Estado*</label>
+              <input class="form-control" type="text" placeholder="Ex: Ceará" aria-label="Ex: Ceará" name="state" required>
             </div>
           </div>
           <div class="col-sm-12 text-center">
-            <button class="btn btn-danger button me-4 col">Cancelar</button>
-            <button class="btn btn-success button col">Salvar</button>
+            <a class="btn btn-danger button me-4 col" href="index.html">Cancelar</a>
+            <button type="submit" class="btn btn-success button col">Salvar</button>
           </div>
         </div>
       </form>
@@ -129,6 +128,7 @@
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/77c7be6730.js" crossorigin="anonymous"></script>
+  <script type="module" src="assets/js/controller/clientService-controller.js"></script>
 </body>
 
 </html>
