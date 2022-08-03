@@ -27,11 +27,6 @@
       "name": "Civic",
       "idBrand": 1,
       "id": 2
-    },
-    {
-      "name": "asdasdas",
-      "idBrand": 2,
-      "id": 3
     }
   ],
   "service": [
@@ -79,7 +74,7 @@
       "id": 1,
       "dateRegister": "03/08/2022",
       "dateFinal": "03/08/2022",
-      "Status": "Aberto",
+      "status": "Aberto",
       "clientName": "joão",
       "phone": "12 34567890",
       "brand": "Honda",

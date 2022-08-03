@@ -53,22 +53,23 @@ const createOption = (name, id) => {
 
 const selectClient = document.querySelector("[data-form-cliente]");
 
-clientService.listClients()
-  .then(data => {
-    data.forEach(client => {
-      selectClient.appendChild(createOption(client.name, client.id));
+if (selectClient != null)
+  clientService.listClients()
+    .then(data => {
+      data.forEach(client => {
+        selectClient.appendChild(createOption(client.name, client.id));
+      });
     });
-  });
 
 const selectBrand = document.querySelector("[data-form-marca]");
 
 if (selectBrand != null)
   brandService.listBrands()
-  .then(data => {
-    data.forEach(brand =>{
-      selectBrand.appendChild(createOption(brand.name, brand.id))
+    .then(data => {
+      data.forEach(brand => {
+        selectBrand.appendChild(createOption(brand.name, brand.id))
+      });
     });
-  });
 
 const selectModel = document.querySelector("[data-form-modelo]");
 
@@ -89,3 +90,4 @@ if (selectService != null)
         selectService.appendChild(createOption(service.name, service.id))
       });
     });
+
