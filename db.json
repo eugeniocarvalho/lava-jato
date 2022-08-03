@@ -36,9 +36,9 @@
   ],
   "service": [
     {
-      "id": 1,
       "name": "Lavagem simples",
-      "value": 50
+      "value": "55",
+      "id": 1
     },
     {
       "name": "Lavagem rápida",
