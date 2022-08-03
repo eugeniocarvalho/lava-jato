@@ -37,13 +37,14 @@ brandService.listBrands()
     });
   });
 
-brandTable.addEventListener("click", event => {
-  const deleteButton = event.target.className == "fa-regular fa-trash-can";
-  
-  if (deleteButton) {
-    const brand = event.target.closest("[data-id]");
-    const id = brand.dataset.id;
+if (brandTable != null)
+  brandTable.addEventListener("click", event => {
+    const deleteButton = event.target.className == "fa-regular fa-trash-can";
 
-    brandService.deleteBrand(id);
-  }
-});
+    if (deleteButton) {
+      const brand = event.target.closest("[data-id]");
+      const id = brand.dataset.id;
+
+      brandService.deleteBrand(id);
+    }
+  });

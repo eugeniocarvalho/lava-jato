@@ -11,5 +11,5 @@ form.addEventListener("submit", (event) => {
   const idBrand = select.options[select.selectedIndex].value;
 
   if (name.length > 0)
-    modelService.createModel(name, idBrand);
+    modelService.createModel(name, parseInt(idBrand));
 });

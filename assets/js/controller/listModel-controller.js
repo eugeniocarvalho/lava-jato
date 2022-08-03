@@ -21,7 +21,7 @@ const modelTable = document.querySelector("[data-table]");
 modelService.listModels()
 .then(data => {
   data.forEach(model => {
-    modelTable.appendChild(addnewModelToTable(model.name, model.id, model.idBrand))
+    modelTable.appendChild(addnewModelToTable(model.name, model.id, model.idBrand));
   });
 });
 
