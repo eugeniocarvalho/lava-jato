@@ -20,6 +20,7 @@ const createClient = (client) => {
     return response.body;
   })
 }
+
 const fillZipCode = (zipCodeValue) => {
   const zipCode = zipCodeValue.replace(/\D/g, "");
 
