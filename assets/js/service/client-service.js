@@ -7,8 +7,8 @@ const createClient = (client) => {
     body: JSON.stringify({
       "name": client.name,
       "phone": client.phone,
-      "document": client.clientDocument,
-      "cep": client.zipCode,
+      "doc": client.doc,
+      "zipCode": client.zipCode,
       "street": client.street,
       "number": client.number,
       "complement": client.complement,
@@ -56,7 +56,55 @@ function fillAddressFields(data) {
   form.state.value = data.uf;
 }
 
+const listClients = () => {
+  return fetch(`http://localhost:3000/client`)
+    .then(response => {
+      return response.json();
+    });
+}
+
+const detailsClient = (id) => {
+  return fetch(`http://localhost:3000/client/${id}`)
+    .then(response => {
+      return response.json();
+    })
+}
+
+const deleteClient = (id) => {
+  return fetch(`http://localhost:3000/client/${id}`, {
+    method: "DELETE"
+  });
+}
+
+const updateClient = (id, client) => {
+  return fetch(`http://localhost:3000/client/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({
+      "name": client.name,
+      "phone": client.phone,
+      "doc": client.doc,
+      "zipCode": client.zipCode,
+      "street": client.street,
+      "number": client.number,
+      "complement": client.complement,
+      "district": client.district,
+      "city": client.city,
+      "state": client.state
+    })
+  })
+    .then(resposta => {
+      return resposta.json();
+    });
+}
+
 export const clientService = {
   createClient,
   fillZipCode,
+  listClients,
+  detailsClient,
+  deleteClient,
+  updateClient
 }

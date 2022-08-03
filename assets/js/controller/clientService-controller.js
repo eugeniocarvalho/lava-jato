@@ -2,15 +2,6 @@ import { clientService } from "../service/client-service.js";
 
 const form = document.querySelector("[data-form]");
 const zipCode = form.zipCode;
-const name = form.name.value;
-const phone = form.phone.value;
-const clientDocument = form.document.value;
-const street = form.street.value;
-const number = form.number.value;
-const complement = form.complement.value;
-const district = form.district.value;
-const city = form.city.value;
-const state = form.state.value;
 
 if (form != null)
   form.addEventListener("submit", (event) => {
@@ -19,8 +10,9 @@ if (form != null)
     const client = {
       "name": form.name.value,
       "phone": form.phone.value,
-      "document": form.document.value,
+      "doc": form.doc.value,
       "street": form.street.value,
+      "zipCode": form.zipCode.value,
       "number": form.number.value,
       "complement": form.complement.value,
       "district": form.district.value,
@@ -29,6 +21,7 @@ if (form != null)
     }
 
     clientService.createClient(client);
+    window.location.href="clientes.html";
   });
 
 zipCode.addEventListener("input", event => {
@@ -43,5 +36,4 @@ zipCode.addEventListener("input", event => {
     form.state.value = "";
   }
 })
-
 

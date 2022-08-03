@@ -50,37 +50,25 @@
   </header>
 
   <main class="container-fluid">
+
     <section class="p-5 d-flex justify-content-between align-items-center flex-wrap">
-      <h1>Marcas</h1>
-      <a class="btn btn-primary button" href="cadastra_cliente.html">Cadastrar clientes</a>
+      <h1>Clientes</h1>
+      <a class="btn btn-primary button" href="cadastra_cliente.html">Cadastrar cliente</a>
     </section>
-    <section class="brand-table">
+    <section class="container-table">
       <table class="table table-hover">
         <thead>
           <tr>
             <th scope="col">Nome</th>
+            <th>CPF/CNPJ</th>
             <th colspan="2" class=" ">Opções</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Mark</td>
-            <td class="icone-editar"><i class="fa-solid fa-pencil"></i></td>
-            <td class="icone-deletar"><i class="fa-regular fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>Jacob</td>
-            <td class="icone-editar"><i class="fa-solid fa-pencil"></i></td>
-            <td class="icone-deletar"><i class="fa-regular fa-trash-can"></i></td>
-          </tr>
-          <tr>
-            <td>Larry the Bird</td>
-            <td class="icone-editar"><i class="fa-solid fa-pencil"></i></td>
-            <td class="icone-deletar"><i class="fa-regular fa-trash-can"></i></td>
-          </tr>
+        <tbody data-table>
+          
         </tbody>
       </table>
-    </section>
+    </section> 
   </main>
 
   <footer class="bg-light text-center text-lg-start py-2 mt-auto">
@@ -93,7 +81,7 @@
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/77c7be6730.js" crossorigin="anonymous"></script>
-  <script type="module" src="assets/js/controller/clientService-controller.js"></script>
+  <script type="module" src="assets/js/controller/listClient-controller.js"></script>
 </body>
 
 </html>
