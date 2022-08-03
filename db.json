@@ -73,5 +73,25 @@
       "state": "CE",
       "id": 2
     }
+  ],
+  "attendance": [
+    {
+      "id": 1,
+      "dateRegister": "03/08/2022",
+      "dateFinal": "03/08/2022",
+      "Status": "Aberto",
+      "clientName": "João",
+      "phone": "12 34567890",
+      "brand": "Honda",
+      "model": "Civic",
+      "plate": "ABC-1234",
+      "zipCode": "62360000",
+      "street": "Rua 7 setembro",
+      "number": "123",
+      "complement": "prox a praça",
+      "district": "centro",
+      "city": "Ibiapina",
+      "state": "CE"
+    }
   ]
 }
