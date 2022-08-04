@@ -6,7 +6,7 @@ const addnewModelToTable = (name, id, idBrand) => {
   const content = `
             <td>${name}</td>
             <td>${idBrand}</td>
-            <td class="icone-editar"><a href="edit_brand.html?id=${id}"><i class="fa-solid fa-pencil"></i></a></td>
+            <td class="icone-editar"><a href="edit_model.html?id=${id}"><i class="fa-solid fa-pencil"></i></a></td>
             <td class="icone-deletar"><i class="fa-regular fa-trash-can"></i></td>
           `;
 
@@ -17,21 +17,24 @@ const addnewModelToTable = (name, id, idBrand) => {
 
 const modelTable = document.querySelector("[data-table]");
 
+if (modelTable != null) {
 
-modelService.listModels()
-.then(data => {
-  data.forEach(model => {
-    modelTable.appendChild(addnewModelToTable(model.name, model.id, model.idBrand));
+  modelService.listModels()
+  .then(data => {
+    data.forEach(model => {
+      modelTable.appendChild(addnewModelToTable(model.name, model.id, model.idBrand));
+    });
   });
-});
 
-modelTable.addEventListener("click", event => {
-  const deleteButton = event.target.className == "fa-regular fa-trash-can";
-  
-  if (deleteButton) {
-    const brand = event.target.closest("[data-id]");
-    const id = brand.dataset.id;
 
-    modelService.deleteModel(id);
-  }
-});
+  modelTable.addEventListener("click", event => {
+    const deleteButton = event.target.className == "fa-regular fa-trash-can";
+    
+    if (deleteButton) {
+      const brand = event.target.closest("[data-id]");
+      const id = brand.dataset.id;
+      
+      modelService.deleteModel(id);
+    }
+  });
+}

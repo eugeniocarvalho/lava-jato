@@ -10,6 +10,8 @@ form.addEventListener("submit", (event) => {
   const name = document.querySelector(".form-control").value;
   const idBrand = select.options[select.selectedIndex].value;
 
-  if (name.length > 0)
+  if (name.length > 0) {
     modelService.createModel(name, parseInt(idBrand));
+  window.location.href="modelos.html"
+  }
 });

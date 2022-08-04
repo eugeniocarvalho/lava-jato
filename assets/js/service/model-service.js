@@ -43,6 +43,13 @@ const updateModel = (id, name, idBrand) => {
   });
 }
 
+const detailsModel = (id) => {
+  return fetch(`http://localhost:3000/model/${id}`)
+  .then( response => {
+    return response.json();
+  })
+}
+
 const deleteModel = (id) => {
   return fetch(`http://localhost:3000/model/${id}`, {
     method: "DELETE"
@@ -54,5 +61,6 @@ export const modelService = {
   listModels,
   // getBrandById
   updateModel,
+  detailsModel,
   deleteModel
 }

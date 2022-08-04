@@ -9,4 +9,5 @@ form.addEventListener("submit", (event) => {
   const value = form.valor_unitario.value;
 
   menuService.registerService(name, parseInt(value));
+  window.location.href="servicos.html"
 });
