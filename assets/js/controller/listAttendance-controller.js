@@ -37,7 +37,7 @@ if (attendanceTable != null) {
       const client = event.target.closest("[data-id]");
       const id = client.dataset.id;
 
-      attendanceService.deleteAttendence(id);
+      attendanceService.deleteAttendance(id);
     }
   });
 }
