@@ -55,32 +55,32 @@
   <main class="container-fluid">
     <section class="client-register">
       <h1>Cadastrar atendimento</h1>
+      <span class="message-erro" style="font-size: 1.5rem; color: tomato; display: none">Lista serviço vazia!</span>
       <div class="d-flex flex-wrap justify-content-between">
         <form class="data-form " data-form-atendimento>
           <div class="container">
             <div class="row">
               <div class="col-md-3 mt-3">
-                <label class="form-label" for="name">Nome*</label>
-                <input class="form-control" type="text" placeholder="Ex: João Santos" aria-label="Ex: João Santos"
-                  name="name" required>
+                <label class="form-label" for="telefone">Data registro*</label>
+                <input class="form-control" type="datetime-local" id="dateregister" name="dateregister" required>
               </div>
 
               <div class="col-md-3 mt-3">
-                <label class="form-label" for="telefone">Data registro*</label>
-                <input class="form-control" type="datetime-local" id="dateregister" name="dateregister">
+                <label class="form-label" for="telefone">Data finalização*</label>
+                <input class="form-control" type="datetime-local" id="datefinal" name="datefinal" required>
               </div>
 
               <div class="col-md-2 mt-3">
                 <label class="form-label" for="telefone">Status*</label>
-                <input class="form-control" type="text" placeholder="Ex: Aberto" aria-label="Ex: 111.222.333-44" name="doc" required value="Aberto">
+                <input class="form-control" type="text" placeholder="Ex: Aberto" aria-label="Status" name="status" required value="Aberto">
               </div>
             </div>
 
             <div class="row">
               <div class="col-md-3 mt-3">
                 <label class="form-label" for="cliente">Cliente*</label>
-                <select class="form-select bg-light " aria-label="- Selecione o cliente -" data-form-cliente>
-                  <option selected>- Selecione o cliente -</option>
+                <select class="form-select bg-light " aria-label="- Selecione o cliente -" data-form-cliente name="cliente" required>
+                  <option>- Selecione o cliente -</option>
 
                 </select>
               </div>
@@ -94,24 +94,24 @@
 
             <div class="row">
               <div class="col-md-3 mt-3">
-                <label class="form-label" for="name">Marca do veículo*</label>
-                <select class="form-select bg-light " aria-label="- Selecione o cliente -" data-form-marca>
-                  <option selected>- Selecione a marca -</option>
+                <label class="form-label" for="brand">Marca do veículo*</label>
+                <select class="form-select bg-light " aria-label="- Selecione o cliente -" data-form-marca name="brand" required>
+                  <option>- Selecione a marca -</option>
 
                 </select>
               </div>
 
               <div class="col-md-3 mt-3">
-                <label class="form-label" for="telefone">Modelo do veículo*</label>
-                <select class="form-select bg-light " aria-label="- Selecione o cliente -" data-form-modelo>
-                  <option selected>- Selecione o modelo -</option>
+                <label class="form-label" for="model">Modelo do veículo*</label>
+                <select class="form-select bg-light " aria-label="- Selecione o cliente -" data-form-modelo name="model" required>
+                  <option >- Selecione o modelo -</option>
 
                 </select>
               </div>
 
               <div class="col-md-2 mt-3">
                 <label class="form-label" for="telefone">Placa*</label>
-                <input class="form-control" type="text" placeholder="Ex: ABC-123" aria-label="Ex: ABC-123" name="number"required>
+                <input class="form-control" type="text" placeholder="Ex: ABC-123" aria-label="Ex: ABC-123" name="plate"required>
               </div>
             </div>
 

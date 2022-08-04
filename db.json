@@ -87,6 +87,36 @@
       "district": "centro",
       "city": "Ibiapina",
       "state": "CE"
+    },
+    {
+      "dateRegister": "2022-08-03T21:12",
+      "dateFinal": "2022-08-04T21:12",
+      "clientName": "joão",
+      "phone": "8818284829",
+      "status": "Aberto",
+      "brand": "Honda",
+      "model": "Supra",
+      "plate": "ABC-123",
+      "zipCode": "62360000",
+      "street": "Rua",
+      "number": "123",
+      "complement": "prox a praça",
+      "district": "centro",
+      "city": "ibiapina",
+      "state": "ce",
+      "services": [
+        {
+          "name": "Lavagem simples",
+          "id": "1",
+          "value": "100"
+        },
+        {
+          "name": "Lavagem rápida",
+          "id": "2",
+          "value": "120"
+        }
+      ],
+      "id": 2
     }
   ]
 }
