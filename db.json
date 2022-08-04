@@ -71,36 +71,18 @@
   ],
   "attendance": [
     {
-      "id": 1,
-      "dateRegister": "03/08/2022",
-      "dateFinal": "03/08/2022",
+      "dateRegister": "2022-08-04T22:05",
+      "dateFinal": "2022-08-04T22:05",
+      "clientName": "2",
+      "phone": "82371288",
       "status": "Aberto",
-      "clientName": "joão",
-      "phone": "12 34567890",
-      "brand": "Honda",
-      "model": "Civic",
-      "plate": "ABC-1234",
-      "zipCode": "62360000",
-      "street": "Rua 7 setembro",
-      "number": "123",
-      "complement": "prox a praça",
-      "district": "centro",
-      "city": "Ibiapina",
-      "state": "CE"
-    },
-    {
-      "dateRegister": "2022-08-03T21:12",
-      "dateFinal": "2022-08-04T21:12",
-      "clientName": "joão",
-      "phone": "8818284829",
-      "status": "Aberto",
-      "brand": "Honda",
-      "model": "Supra",
-      "plate": "ABC-123",
+      "brand": "1",
+      "model": "2",
+      "plate": "BCC-122",
       "zipCode": "62360000",
       "street": "Rua",
-      "number": "123",
-      "complement": "prox a praça",
+      "number": "12",
+      "complement": "PRAÇA",
       "district": "centro",
       "city": "ibiapina",
       "state": "ce",
@@ -108,12 +90,37 @@
         {
           "name": "Lavagem simples",
           "id": "1",
-          "value": "100"
+          "value": "12"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "dateRegister": "2022-08-03T22:14",
+      "dateFinal": "2022-08-04T22:14",
+      "clientName": "1",
+      "phone": "1231231231231",
+      "status": "Aberto",
+      "brand": "3",
+      "model": "1",
+      "plate": "asdasd",
+      "zipCode": "62360000",
+      "street": "Rua abril",
+      "number": "123",
+      "complement": "prox a praça",
+      "district": "centro",
+      "city": "Ibiapina",
+      "state": "CE",
+      "services": [
+        {
+          "name": "Lavagem simples",
+          "id": "1",
+          "value": "12"
         },
         {
-          "name": "Lavagem rápida",
+          "name": "Lavagem simples",
           "id": "2",
-          "value": "120"
+          "value": "123"
         }
       ],
       "id": 2

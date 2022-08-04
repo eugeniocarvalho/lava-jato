@@ -34,7 +34,45 @@ const createAttendance = (attendance) =>  {
   })
 }
 
-const deleteAttendence = (id) => {
+const updateAttendance = (id, attendance) => {
+  return fetch(`http://localhost:3000/attendance/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({
+      "dateRegister": attendance.dateRegister,
+      "dateFinal": attendance.dateFinal,
+      "clientName": attendance.clientName,
+      "phone": attendance.phone,
+      "status": attendance.status,
+      "brand": attendance.brand,
+      "model": attendance.model,
+      "plate": attendance.plate,
+      "zipCode": attendance.zipCode,
+      "street": attendance.street,
+      "number": attendance.number,
+      "complement": attendance.complement,
+      "district": attendance.district,
+      "city": attendance.city,
+      "state": attendance.state,
+      "services": attendance.services
+    })
+  })
+    .then(response => {
+      return response.json();
+    });
+}
+
+const detailsAttendance = (id) => {
+  return fetch(`http://localhost:3000/attendance/${id}`)
+    .then(response => {
+      return response.json();
+    })
+}
+
+
+const deleteAttendance = (id) => {
   return fetch(`http://localhost:3000/attendance/${id}`, {
     method: "DELETE"
   });
@@ -43,5 +81,7 @@ const deleteAttendence = (id) => {
 export const attendanceService = {
   listAttendances,
   createAttendance,
-  deleteAttendence,
+  updateAttendance,
+  detailsAttendance,
+  deleteAttendance,
 }

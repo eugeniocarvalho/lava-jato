@@ -1,11 +1,54 @@
 import { attendanceService } from "../service/attendance-service.js";
 
+const getUrl = new URL(window.location);
+const id = getUrl.searchParams.get("id");
 const formServices = document.querySelector("[data-formulario-servico]");
 const tableServices = document.querySelector("[data-table-servico]");
 const valueTotal = document.querySelector("[data-valor]");
 const formAttendance = document.querySelector("[data-form-atendimento]");
-const serviceItems = [];
+let serviceItems = [];
 const mesageErro = document.querySelector(".message-erro");
+
+attendanceService.detailsAttendance(parseInt(id))
+  .then(data => {
+    console.log(formAttendance.cliente.selectedIndex)
+    formAttendance.dateregister.value = data.dateRegister;
+    formAttendance.datefinal.value = data.dateFinal;
+    formAttendance.cliente.value = parseInt(data.clientName);
+    formAttendance.phone.value = data.phone;
+    formAttendance.status.value = data.status;
+    formAttendance.brand.value = parseInt(data.brand);
+    formAttendance.model.value = parseInt(data.model);
+    formAttendance.plate.value = data.plate;
+    formAttendance.zipCode.value = data.zipCode;
+    formAttendance.street.value = data.street;
+    formAttendance.number.value = data.number;
+    formAttendance.complement.value = data.complement;
+    formAttendance.district.value = data.district;
+    formAttendance.city.value = data.city;
+    formAttendance.state.value = data.state;
+
+    if (serviceItems.length == 0) {
+      data.services.forEach(service => {
+        const select = document.querySelector(".form-select-servico");
+        const nameService = service.name;
+        const id = service.id;
+        const serviceValue = service.value;
+
+        const serviceItem = {
+          "name": nameService,
+          "id": id,
+          "value": serviceValue
+        };
+
+        serviceItems.push(serviceItem)
+
+        valueTotal.textContent = parseFloat(parseFloat(valueTotal.textContent) + parseFloat(serviceValue)).toFixed(2);
+        tableServices.appendChild(addnewServiceToTableOfService(id, nameService, serviceValue));
+      });
+    }
+
+  });
 
 const addnewServiceToTableOfService = (id, name, value) => {
   const newTr = document.createElement("tr");
@@ -21,31 +64,15 @@ const addnewServiceToTableOfService = (id, name, value) => {
   return newTr;
 }
 
-formServices.addEventListener("submit", event => {
-  event.preventDefault();
-
-  const select = document.querySelector(".form-select-servico");
-  const nameService = select.options[select.selectedIndex].textContent;
-  const id = select.options[select.selectedIndex].value;
-  const serviceValue = document.querySelector(".form-input-value").value;
-
-  const service = {
-    "name": nameService,
-    "id": id,
-    "value": serviceValue
-  };
-
-  serviceItems.push(service)
-
-  valueTotal.textContent = parseFloat(parseFloat(valueTotal.textContent) + parseFloat(serviceValue)).toFixed(2);
-  tableServices.appendChild(addnewServiceToTableOfService(id, nameService, serviceValue));
-})
-
 tableServices.addEventListener("click", event => {
   const deleteButton = event.target.className == "fa-regular fa-trash-can";
-
+  
   if (deleteButton) {
-    event.target.parentNode.parentNode.remove()
+    const client = event.target.closest("[data-id]");
+    const id = client.dataset.id;
+
+    serviceItems = serviceItems.filter((item) => item.id !== id.toString());
+    client.remove();
   }
 });
 
@@ -78,8 +105,10 @@ formAttendance.addEventListener("submit", event => {
       "services": serviceItems
     }
 
-    attendanceService.createAttendance(attendanceItem);
+    attendanceService.updateAttendance(id, attendanceItem);
   }
 
 
 });
+
+
