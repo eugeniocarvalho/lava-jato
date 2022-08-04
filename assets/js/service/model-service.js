@@ -1,5 +1,5 @@
 const createModel = (name, idBrand) => {
-  return fetch(`http://localhost:3000/model`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/model`, {
     method: "POST",
     headers: {
       "Content-type": "application/json"
@@ -14,21 +14,21 @@ const createModel = (name, idBrand) => {
 }
 
 const listModels = () => {
-  return fetch(`http://localhost:3000/model`)
+  return fetch(`https://box3-lava-jato.herokuapp.com/model`)
   .then( response => {
     return response.json();
   });
 }
 
 // const getBrandById = (id) => {
-//   return fetch(`http://localhost:3000/brand/${id}`)
+//   return fetch(`https://box3-lava-jato.herokuapp.com/brand/${id}`)
 //   .then(response => {
 //     return response.json()
 //   })
 // }
 
 const updateModel = (id, name, idBrand) => {
-  return fetch(`http://localhost:3000/model/${id}`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/model/${id}`, {
     method: "PUT",
     headers: {
       "Content-type": "application/json",
@@ -44,14 +44,14 @@ const updateModel = (id, name, idBrand) => {
 }
 
 const detailsModel = (id) => {
-  return fetch(`http://localhost:3000/model/${id}`)
+  return fetch(`https://box3-lava-jato.herokuapp.com/model/${id}`)
   .then( response => {
     return response.json();
   })
 }
 
 const deleteModel = (id) => {
-  return fetch(`http://localhost:3000/model/${id}`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/model/${id}`, {
     method: "DELETE"
   });
 }

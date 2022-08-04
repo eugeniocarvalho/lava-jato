@@ -1,12 +1,12 @@
 const listAttendances = () => {
-  return fetch(`http://localhost:3000/attendance`)
+  return fetch(`https://box3-lava-jato.herokuapp.com/attendance`)
     .then(response => {
       return response.json();
     });
 }
 
 const createAttendance = (attendance) =>  {
-  return fetch(`http://localhost:3000/attendance`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/attendance`, {
     method: "POST",
     headers: {
       "Content-type": "application/json"
@@ -35,7 +35,7 @@ const createAttendance = (attendance) =>  {
 }
 
 const updateAttendance = (id, attendance) => {
-  return fetch(`http://localhost:3000/attendance/${id}`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/attendance/${id}`, {
     method: "PUT",
     headers: {
       "Content-type": "application/json",
@@ -65,7 +65,7 @@ const updateAttendance = (id, attendance) => {
 }
 
 const detailsAttendance = (id) => {
-  return fetch(`http://localhost:3000/attendance/${id}`)
+  return fetch(`https://box3-lava-jato.herokuapp.com/attendance/${id}`)
     .then(response => {
       return response.json();
     })
@@ -73,7 +73,7 @@ const detailsAttendance = (id) => {
 
 
 const deleteAttendance = (id) => {
-  return fetch(`http://localhost:3000/attendance/${id}`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/attendance/${id}`, {
     method: "DELETE"
   });
 }

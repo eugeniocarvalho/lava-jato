@@ -1,5 +1,5 @@
 const createClient = (client) => {
-  return fetch(`http://localhost:3000/client`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/client`, {
     method: "POST",
     headers: {
       "Content-type": "application/json"
@@ -58,27 +58,27 @@ function fillAddressFields(data) {
 }
 
 const listClients = () => {
-  return fetch(`http://localhost:3000/client`)
+  return fetch(`https://box3-lava-jato.herokuapp.com/client`)
     .then(response => {
       return response.json();
     });
 }
 
 const detailsClient = (id) => {
-  return fetch(`http://localhost:3000/client/${id}`)
+  return fetch(`https://box3-lava-jato.herokuapp.com/client/${id}`)
     .then(response => {
       return response.json();
     })
 }
 
 const deleteClient = (id) => {
-  return fetch(`http://localhost:3000/client/${id}`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/client/${id}`, {
     method: "DELETE"
   });
 }
 
 const updateClient = (id, client) => {
-  return fetch(`http://localhost:3000/client/${id}`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/client/${id}`, {
     method: "PUT",
     headers: {
       "Content-type": "application/json",

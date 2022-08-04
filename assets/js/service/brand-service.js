@@ -1,12 +1,12 @@
 const listBrands = () => {
-  return fetch(`http://localhost:3000/brand`)
+  return fetch(`https://box3-lava-jato.herokuapp.com/brand`)
   .then( response => {
     return response.json();
   });
 }
 
 const registerBrand = (name) => {
-  return fetch(`http://localhost:3000/brand`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/brand`, {
     method: "POST",
     headers: {
       "Content-type": "application/json"
@@ -20,13 +20,13 @@ const registerBrand = (name) => {
 }
 
 const deleteBrand = (id) => {
-  return fetch(`http://localhost:3000/brand/${id}`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/brand/${id}`, {
     method: "DELETE"
   });
 }
 
 const updateBrand = (id, name) => {
-  return fetch(`http://localhost:3000/brand/${id}`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/brand/${id}`, {
     method: "PUT",
     headers: {
       "Content-type": "application/json",
@@ -41,7 +41,7 @@ const updateBrand = (id, name) => {
 }
 
 const detailsBrand = (id) => {
-  return fetch(`http://localhost:3000/brand/${id}`)
+  return fetch(`https://box3-lava-jato.herokuapp.com/brand/${id}`)
   .then( response => {
     return response.json();
   })

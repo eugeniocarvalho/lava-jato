@@ -1,5 +1,5 @@
 const registerService = (name, value) => {
-  return fetch(`http://localhost:3000/service`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/service`, {
     method: "POST",
     headers: {
       "Content-type": "application/json"
@@ -14,14 +14,14 @@ const registerService = (name, value) => {
 }
 
 const listServices = () => {
-  return fetch(`http://localhost:3000/service`)
+  return fetch(`https://box3-lava-jato.herokuapp.com/service`)
   .then( response => {
     return response.json();
   });
 }
 
 const updateService = (id, name, value) => {
-  return fetch(`http://localhost:3000/service/${id}`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/service/${id}`, {
     method: "PUT",
     headers: {
       "Content-type": "application/json",
@@ -37,14 +37,14 @@ const updateService = (id, name, value) => {
 }
 
 const detailsService = (id) => {
-  return fetch(`http://localhost:3000/service/${id}`)
+  return fetch(`https://box3-lava-jato.herokuapp.com/service/${id}`)
   .then( response => {
     return response.json();
   })
 }
 
 const deleteService = (id) => {
-  return fetch(`http://localhost:3000/service/${id}`, {
+  return fetch(`https://box3-lava-jato.herokuapp.com/service/${id}`, {
     method: "DELETE"
   });
 }
